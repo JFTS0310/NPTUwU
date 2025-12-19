@@ -214,7 +214,7 @@ periodOrder.forEach(item => {
     timeHeader.appendChild(codeDiv);
     timeHeader.appendChild(timeDiv);
 
-    if (period === "M" || period === "N" || period === "L")
+    if (period === "M" || period === "L" || period === "A" || period === "B" || period === "C" || period === "D")
         timeHeader.classList.add('extra');
     
     row.appendChild(timeHeader);
@@ -227,7 +227,7 @@ periodOrder.forEach(item => {
         
         if (day === 6 || day === 7)
             block.classList.add('weekend');
-        if (period === "M" || period === "N" || period === "L")
+        if (period === "M" || period === "L" || period === "A" || period === "B" || period === "C" || period === "D")
             block.classList.add('extra');
 
         const overlay = document.createElement("div");
