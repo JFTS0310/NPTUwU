@@ -128,18 +128,45 @@ if (location.search.includes("share=")) {
 
 const styleFix = document.createElement('style');
 styleFix.innerHTML = `
-    .timetable th, .timetable .extra {
-        min-width: 160px !important;
-        width: 160px !important;
-        max-width: 160px !important;
-        white-space: nowrap !important;
+    .timetable {
+        width: 100% !important;
+        table-layout: fixed !important;
     }
-    
-    .timetable th div {
+
+    .timetable th, .timetable td {
+        white-space: normal !important;
+        word-wrap: break-word !important; 
+        overflow-wrap: break-word !important;
         text-align: center;
+        vertical-align: middle !important;
+    }
+
+    .timetable th:first-child {
+        width: 75px !important;
+        max-width: 75px !important;
+        padding: 5px 0 !important;
+    }
+
+    .timetable th:first-child div:first-child {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+
+    .timetable th:first-child div:last-child {
+        font-size: 0.7rem !important;
+        line-height: 1.2;
+        color: #666;
+    }
+
+    .timetable td {
+        width: auto !important;
+        font-size: 0.9rem;
+        padding: 4px !important;
     }
 `;
 document.head.appendChild(styleFix);
+// ----------------------------------
 
 const periodOrder = [
   "M/07:30 ~ 07:50",
