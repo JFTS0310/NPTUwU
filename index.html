@@ -70,7 +70,7 @@
             </div>
             <div class="column">
                 <div class="columns is-marginless">
-                    <div class="column">
+                    <div class="column sticky-panel">
                         <div class="field chips" id="search-period">
                         </div>
                     </div>
@@ -205,7 +205,21 @@
         </div>
     </div>
 
-    <style id="custom-style"></style>
+    <style id="custom-style"><style>
+    @media screen and (min-width: 1024px) {
+        .sticky-panel {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 4rem;
+            align-self: flex-start;
+            height: fit-content;
+        }
+    }
+    .table-container {
+        display: flex;
+        justify-content: center;
+    }
+</style>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/src/dom-to-image.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
