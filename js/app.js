@@ -142,8 +142,8 @@ styleFix.innerHTML = `
     }
 
     .timetable th:first-child {
-        width: 75px !important;
-        max-width: 75px !important;
+        width: 80px !important;
+        max-width: 80px !important;
         padding: 5px 0 !important;
     }
 
